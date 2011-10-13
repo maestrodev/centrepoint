@@ -7,8 +7,8 @@
   <packaging>pom</packaging>
   <version>1-SNAPSHOT</version>
   <scm>
-    <connection>scm:git:git://github.com/brettporter/centrepoint.git</connection>
-    <developerConnection>scm:git:git://github.com/brettporter/centrepoint.git</developerConnection>
+    <connection>scm:git:git://github.com/ctan/centrepoint.git</connection>
+    <developerConnection>scm:git:git://github.com/ctan/centrepoint.git</developerConnection>
   </scm>
   <description>
     Centrepoint is a basic but useful application that sets up a dashboard of project information from Maven, Archiva and Continuum.
@@ -25,5 +25,15 @@
     <module>effectivemaven-parent</module>
     <module>centrepoint</module>
   </modules>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>maestro-archiva</id>
+      <url>${archivaBaseUrl}/repository/com.effectivemaven.centrepoint.snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>maestro-archiva</id>
+      <url>${archivaBaseUrl}/repository/com.effectivemaven.centrepoint.releases/</url>
+    </repository>
+  </distributionManagement>
 </project>
 

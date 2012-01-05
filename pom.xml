@@ -27,11 +27,11 @@
   </modules>
   <distributionManagement>
     <snapshotRepository>
-      <id>maestro-archiva</id>
+      <id>maestro-deploy</id>
       <url>${archivaBaseUrl}/repository/com.effectivemaven.centrepoint.snapshots/</url>
     </snapshotRepository>
     <repository>
-      <id>maestro-archiva</id>
+      <id>maestro-deploy</id>
       <url>${archivaBaseUrl}/repository/com.effectivemaven.centrepoint.releases/</url>
     </repository>
   </distributionManagement>

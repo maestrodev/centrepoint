@@ -16,8 +16,9 @@ package com.effectivemaven.centrepoint.selenium;
  * limitations under the License. 
  */
 
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.json.simple.JSONObject;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -30,24 +31,31 @@ public abstract class AbstractSeleniumTestCase
 {
     protected static Selenium selenium;
 
-    @BeforeSuite
-    @Parameters( { "selenium.browser" } )
-    public void startSelenium( @Optional String browser )
+    @BeforeMethod
+    @Parameters( { "selenium.username", "selenium.access-key", "selenium.os", "selenium.browser",
+        "selenium.browser-version", "selenium.url" } )
+    public void seleniumStart( String username, String accessKey, String os, String browser, String browserVersion,
+                               String url, java.lang.reflect.Method m )
     {
-        if ( browser == null )
+        JSONObject config = new JSONObject();
+        config.put( "username", username );
+        config.put( "access-key", accessKey );
+        config.put( "os", os );
+        config.put( "browser", browser );
+        config.put( "name", m.getName() );
+
+        if ( browserVersion != null )
         {
-            browser = "*firefox";
+            config.put( "browser-version", browserVersion );
         }
 
-        selenium = new DefaultSelenium( "localhost", 4444, browser, "http://localhost:8080" );
+        selenium = new DefaultSelenium( "ondemand.saucelabs.com", 80, config.toJSONString(), url );
         selenium.start();
-
     }
 
-    @AfterSuite
-    public void stopSelenium()
+    @AfterMethod
+    public void seleniumStop()
     {
         selenium.stop();
     }
-
 }

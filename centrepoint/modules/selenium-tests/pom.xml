@@ -24,6 +24,12 @@
       <type>war</type>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <testResources>
@@ -123,6 +129,11 @@
     </plugins>
   </build>
   <properties>
-    <selenium.browser>*firefox</selenium.browser>
+    <selenium.url>http://localhost:8080</selenium.url>
+    <selenium.username>csanchez</selenium.username>
+    <selenium.access-key>65e90c28-1d58-41b5-a3dc-2f1e14bb7fd6</selenium.access-key>
+    <selenium.os>Linux</selenium.os>
+    <selenium.browser>firefox</selenium.browser>
+    <selenium.browser-version>10</selenium.browser-version>
   </properties>
 </project>

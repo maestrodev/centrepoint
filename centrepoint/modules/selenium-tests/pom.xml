@@ -47,8 +47,28 @@
         <configuration>
           <systemProperties>
             <property>
+              <name>selenium.url</name>
+              <value>${selenium.url}</value>
+            </property>
+            <property>
+              <name>selenium.username</name>
+              <value>${selenium.username}</value>
+            </property>
+            <property>
+              <name>selenium.access-key</name>
+              <value>${selenium.access-key}</value>
+            </property>
+            <property>
+              <name>selenium.os</name>
+              <value>${selenium.os}</value>
+            </property>
+            <property>
               <name>selenium.browser</name>
               <value>${selenium.browser}</value>
+            </property>
+            <property>
+              <name>selenium.browser-version</name>
+              <value>${selenium.browser-version}</value>
             </property>
           </systemProperties>
         </configuration>

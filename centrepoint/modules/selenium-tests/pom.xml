@@ -17,6 +17,7 @@
       <version>1.0.1</version>
       <scope>test</scope>
     </dependency>
+<!--
     <dependency>
       <groupId>com.effectivemaven.centrepoint</groupId>
       <artifactId>webapp</artifactId>
@@ -24,6 +25,7 @@
       <type>war</type>
       <scope>test</scope>
     </dependency>
+-->
     <dependency>
       <groupId>com.googlecode.json-simple</groupId>
       <artifactId>json-simple</artifactId>
@@ -51,6 +53,7 @@
           </systemProperties>
         </configuration>
       </plugin>
+<!--
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>selenium-maven-plugin</artifactId>
@@ -88,10 +91,10 @@
           <classesDirectory>target/dependency/WEB-INF/classes</classesDirectory>
           <webAppSourceDirectory>target/dependency</webAppSourceDirectory>
           
-          <!-- 
+          <#!--
             added to make sure a particular data file is used so we test against a fresh database each time
             make sure you "clean" so that the tests succeed!
-            -->
+            --#>
           <overrideWebXml>target/test-classes/web-override.xml</overrideWebXml>
         </configuration>
         <executions>
@@ -126,6 +129,7 @@
           </execution>
         </executions>
       </plugin>
+-->
     </plugins>
   </build>
   <properties>

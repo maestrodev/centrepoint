@@ -91,10 +91,10 @@
           <classesDirectory>target/dependency/WEB-INF/classes</classesDirectory>
           <webAppSourceDirectory>target/dependency</webAppSourceDirectory>
           
-          <#!--
+          <!-
             added to make sure a particular data file is used so we test against a fresh database each time
             make sure you "clean" so that the tests succeed!
-            --#>
+            ->
           <overrideWebXml>target/test-classes/web-override.xml</overrideWebXml>
         </configuration>
         <executions>

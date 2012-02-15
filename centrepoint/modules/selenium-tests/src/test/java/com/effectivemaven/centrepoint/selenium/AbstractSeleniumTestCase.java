@@ -51,7 +51,7 @@ public abstract class AbstractSeleniumTestCase
 
         selenium = new DefaultSelenium( "ondemand.saucelabs.com", 80, config.toJSONString(), url );
         selenium.start();
-        selenium.setSpeed(3000);
+        selenium.setSpeed("3000");
     }
 
     @AfterMethod

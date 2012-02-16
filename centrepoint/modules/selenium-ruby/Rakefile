@@ -3,7 +3,7 @@
 require 'rspec/core/rake_task'
 
 # default environment values if not set
-ENV['SELENIUM_HOST']||="" # mandatory
+ENV['SELENIUM_URL']||="" # mandatory
 ENV['SELENIUM_HOST']||="ondemand.saucelabs.com"
 ENV['SELENIUM_PORT']||="80"
 ENV['SELENIUM_USERNAME']||="csanchez"

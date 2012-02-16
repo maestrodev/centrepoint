@@ -1,0 +1,6 @@
+gem "rspec", "2.8.0", :group => :test
+
+# selenium
+#gem "sauce", ">= 0.12.2", :group => :test
+gem "selenium-client", ">= 1.2.18", :group => :test
+#gem "selenium-webdriver", ">= 2.19.0", :group => :test

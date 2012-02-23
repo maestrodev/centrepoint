@@ -7,8 +7,8 @@
   <packaging>pom</packaging>
   <version>1-SNAPSHOT</version>
   <scm>
-    <connection>scm:git:git://github.com/ctan/centrepoint.git</connection>
-    <developerConnection>scm:git:git://github.com/ctan/centrepoint.git</developerConnection>
+    <connection>scm:git:git://github.com/maestrodev/centrepoint.git</connection>
+    <developerConnection>scm:git:git://github.com/maestrodev/centrepoint.git</developerConnection>
   </scm>
   <description>
     Centrepoint is a basic but useful application that sets up a dashboard of project information from Maven, Archiva and Continuum.

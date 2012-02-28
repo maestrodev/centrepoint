@@ -15,12 +15,15 @@ def selenium_start(name)
     "name"            => name
   }
 
-  @driver = Selenium::Client::Driver.new(
+  params = {
     :host => ENV['SELENIUM_HOST'],
     :port => ENV['SELENIUM_PORT'],
     :browser => browser.to_json,
     :url => ENV['SELENIUM_URL'],
-    :timeout_in_second => 60)
+    :timeout_in_second => 60
+  }
+  puts "Connecting to Selenium: #{params.inspect}"
+  @driver = Selenium::Client::Driver.new(params)
 
   @driver.start
 end
